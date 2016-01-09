@@ -76,7 +76,7 @@ cesarea.prototype = {
 		feder.body.bounce.set(0.3);
 
 		successAudio=this.game.add.audio('success');
-		var key=navigator.language+"-level1";
+		var key="en"+"-level1";
 		text=i18n[key][2];
 		var style = { font: 'bold 14pt Courier', fill: 'black', align: 'left', wordWrap: true};
 		bmptext = this.game.add.text(papirus.x,papirus.y,text,style);
@@ -140,7 +140,7 @@ cesarea.prototype = {
     			}
  		}
  		if (playOnce==true) {
-			var key=navigator.language+"-level1";
+			var key="en"+"-level1";
 			bmptext.text=i18n[key][3];
   			this.playOnce=false;
   	//		this.successAudio.play(); 

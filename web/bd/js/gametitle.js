@@ -9,7 +9,7 @@ gameTitle.prototype = {
 		playButton.anchor.setTo(0.5,0.5);
 	},
 	playTheGame: function(){
-		console.log("Your navigator language is"+navigator.language);
+	//	console.log("Your navigator language is"+navigator.language);
  		console.log("Starting level1"+localStorage.getItem("bestScore"));
 		this.game.state.start("level1");
 	}
