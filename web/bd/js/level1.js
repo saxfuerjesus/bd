@@ -152,7 +152,7 @@ BDG2.cesarea.prototype = {
 		}
 		var key=keylang.substr(0,2)+"-level1";
 			bmptext.text=i18n[key][3];
-			this.startmusic.stop();
+			this.sound.destroy("startmusic");
 			this.sound.play("opendoors");
   			this.goal1=0;
   			this.goal2=0;
@@ -191,7 +191,8 @@ BDG2.cesarea.prototype = {
 //			console.log("%cdoor touched", "color:white; background:red");
 			if ( this.score>0){
 //				console.log("%c score reached", "color:white; background:red");
-				this.game.state.start("GameOver",true,false,"Lukas 1,3");	
+				 this.sound.destroy("opendoors");
+				this.state.start("GameOver",true,false,"Lukas 1,3");	
 			}
 		}
 	},
