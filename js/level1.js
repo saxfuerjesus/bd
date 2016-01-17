@@ -77,7 +77,6 @@ BDG2.cesarea.prototype = {
 		mail.body.bounce.set(0.3);
 		feder.body.bounce.set(0.3);
 
-		successAudio=this.game.add.audio('success');
 		var keylang=navigator.language;
 		if ( keylang == null ) {
 			keylang = "en-EN";
@@ -153,8 +152,8 @@ BDG2.cesarea.prototype = {
 		}
 		var key=keylang.substr(0,2)+"-level1";
 			bmptext.text=i18n[key][3];
-  			this.playOnce=false;
-//			this.successAudio.play(); 
+			this.startmusic.stop();
+			this.sound.play("opendoors");
   			this.goal1=0;
   			this.goal2=0;
 			this.score=1;
